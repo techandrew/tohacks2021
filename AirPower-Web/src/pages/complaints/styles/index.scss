@@ -1,0 +1,152 @@
+.complaints__wrapper {
+    min-height: 100vh;
+  }
+  .complaints__tabs {
+    background: #123456;
+  
+    .complaints__header {
+      position: absolute;
+      text-align: right;
+      padding: 1rem 0.5rem;
+      top: 1rem;
+      right: 0.5rem;
+      color: white;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    .complaint__tab {
+      background: #102f4f;
+      width: 105%;
+      cursor: pointer;
+      color: white;
+      text-align: right;
+      padding: 1.1rem 1rem;
+      transition: 100ms;
+  
+      &.active {
+        background: #012345;
+      }
+  
+      &:hover {
+        background: #012345;
+      }
+    }
+  }
+  
+  .complaints__listings__sidebar {
+      background: #f8f8f8;
+    // background: lightgray; //Temporarily for low contrast monitor
+    padding: 0;
+  
+    .complaint__listing {
+      padding: 1rem 0.75rem;
+      cursor: pointer;
+      transition: 250ms;
+      background: #e5e5e5;
+      width: 100%;
+  
+      &.active {
+        background: white;
+      }
+  
+      &:hover {
+        background: white;
+      }
+  
+      .top__details {
+        display: flex;
+        justify-content: space-between;
+        color: #6c757d;
+        font-size: 0.8rem;
+      }
+  
+      .complaint__category {
+        font-size: 1.5rem;
+        color: black;
+        font-weight: 500;
+      }
+  
+      .complaint__user {
+        color: #6c757d;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  
+  .complaints__content {
+    background: white;
+  
+    .top__details {
+      margin-top: 5rem;
+      padding: 0;
+      justify-content: space-between;
+  
+      #account_col {
+        text-align: right;
+        padding-right: 2.5rem;
+      }
+  
+      .category__name {
+        font-size: 1.75rem;
+        color: black;
+        font-weight: 500;
+      }
+    }
+  
+    .status {
+      padding: 1.5rem 0;
+    }
+  
+    .complaint__content {
+      padding: 0 1rem;
+      padding-right: 2.5rem;
+  
+      .issue__summary {
+        padding: .5rem 0;
+        width: 100%;
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+    }
+    .category__label {
+      margin: 0.25rem 0;
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  
+    .status {
+      .complaint__select {
+        select {
+          outline: none;
+          background-color: #f8f8f8;
+          border: none;
+          margin: 0;
+          width: 100%;
+          font-family: inherit;
+          font-size: 1rem;
+          cursor: inherit;
+          line-height: inherit;
+          border: 1px solid #919191;
+          padding: 0.5rem 0.25rem;
+        }
+      }
+    }
+  }
+  
+  
+  .loading__wrapper{
+    display: grid;
+    min-width: 100%;
+    min-height: 100vh;
+    place-items: center;
+  }
+  
+  .complaint__lottie__wrapper{
+    width: 25%;
+  margin: 0 auto;
+  
+  }

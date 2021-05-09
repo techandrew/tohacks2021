@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>AirPower</title>
+
+    <style>
+      #wrapper {
+        position: relative;
+        height: 100%;
+      }
+      .profile-main-loader {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: grid;
+        place-items: center;
+        background: white;
+        min-height: 100vh;
+        min-width: 100%;
+        /* left: 50% !important; */
+        /* margin-left: -100px; */
+        position: fixed !important;
+        /* top: 50% !important; */
+        /* margin-top: -100px; */
+        width: 45px;
+        z-index: 9000 !important;
+      }
+      .profile-main-loader .loader {
+        position: relative;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+      }
+      .profile-main-loader .loader:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+      .circular-loader {
+        -webkit-animation: rotate 2s linear infinite;
+        animation: rotate 2s linear infinite;
+        height: 100%;
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform-origin: center center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+      }
+      .loader-path {
+        stroke-dasharray: 150, 200;
+        stroke-dashoffset: -10;
+        -webkit-animation: dash 1.5s ease-in-out infinite,
+          color 6s ease-in-out infinite;
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-linecap: round;
+      }
+      @-webkit-keyframes rotate {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes rotate {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35;
+        }
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124;
+        }
+      }
+      @keyframes dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35;
+        }
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124;
+        }
+      }
+      @-webkit-keyframes color {
+        0% {
+          stroke: #000000;
+        }
+        40% {
+          stroke: #0000ff;
+        }
+        66% {
+          stroke: #ff0000;
+        }
+        80%,
+        90% {
+          stroke: #000000;
+        }
+      }
+      @keyframes color {
+        0% {
+          stroke: #000000;
+        }
+        40% {
+          stroke: #0000ff;
+        }
+        66% {
+          stroke: #ff0000;
+        }
+        80%,
+        90% {
+          stroke: #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="recaptcha"></div>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <div class="profile-main-loader">
+      <div class="loader">
+        <svg class="circular-loader" viewBox="25 25 50 50">
+          <circle
+            class="loader-path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke="#70c542"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+    </div>
+    <script>
+      setTimeout(500, () => {
+        document.querySelector(".profile-main-loader").style.display = "none";
+      });
+    </script>
+  </body>
+</html>

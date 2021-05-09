@@ -1,0 +1,50 @@
+.login__wrapper {
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    * {
+      font-family: "Poppins", sans-serif;
+      color: black;
+    }
+  
+    .lottie__wrapper {
+      margin: 0 auto;
+      max-width: 75%;
+    }
+    .login__box__container {
+      background: #f5f5f5;
+      padding: 3rem 2rem;
+      padding-top: 1rem;
+      min-width: 30%;
+    }
+  
+    .login__header {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      font-weight: 500;
+    }
+    .get__otp__wrapper {
+      display: flex;
+      min-width: 100%;
+      flex-direction: column;
+  
+      .login__field {
+        background: white;
+      }
+      .phone__number {
+        .MuiInputBase-root {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+      .otp__button__wrapper {
+        margin: 0.25rem 0;
+        .otp__button__text {
+            padding: 0 0.5rem;
+            // color: white !important;
+        }
+      }
+    }
+  }
