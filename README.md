@@ -69,7 +69,7 @@ We offer mainly two platforms for our services around the device, a web based ad
 
 > You can take a look at the demo video below on YouTube 
 
-
+[![airpower](https://i.pinimg.com/originals/cc/98/ee/cc98eee389f51e826aaa6c98feaf8906.gif)](https://youtu.be/IpyJzBRXIPU "airpower")
 
 ### The Geeks behind this 🤓
 
